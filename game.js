@@ -56,10 +56,6 @@ function updateBoundaries(status) {
 
 function controlEventListeners(add) {
 
-    var start = document.getElementById("start")
-    start.addEventListener("mouseover", startGame)
-    start.addEventListener("click", reset)
-
     var boundaries = document.getElementsByClassName("boundary")
 
     if (add === true) {
@@ -89,7 +85,10 @@ function controlEventListeners(add) {
 
 function main() {
 
-    controlEventListeners(true)
+    var start = document.getElementById("start")
+    start.addEventListener("mouseover", startGame)
+    start.addEventListener("click", reset)
+
     
     var score_container = document.getElementsByClassName("boundary example")[0]
     score_container.style.padding = "5px 0 0 5px"
